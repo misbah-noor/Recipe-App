@@ -1,16 +1,15 @@
-// import React from 'react'
 import Navbar from './Component/Navbar';
 import Home from './Pages/Home'
-// import RecipeCard from './Component/RecipeCard';
-// import recipes from './data/recipe'
+import { useState } from 'react'
 import './App.css'
 
 function App() {
+const [searchItem, setSearchItem ] = useState("");
 
   return (
  <>
-  <Navbar />
-  <Home />
+  <Navbar searchItem={searchItem} setSearchItem = {setSearchItem}/>
+  <Home searchItem= {searchItem}/>
  </>
   )
 }

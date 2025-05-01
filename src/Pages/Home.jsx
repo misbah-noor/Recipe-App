@@ -2,10 +2,17 @@ import React from 'react';
 import RecipeCard from '../Component/RecipeCard';
 import recipes from '../data/recipe'
 
-const Home = () => {
+const Home = ({ searchItem }) => {
+    const filteredRecipes = recipes.filter((recipe) => recipe.title.toLowerCase().includes(searchItem.toLowerCase())
+);
     return(
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6'>
-    {recipes.map((recipe) => (
+    <div className='py-29 container mx-auto'>
+        <div className='text-center'>
+            <h2 className='text-5xl font-semibold text-red-600 pt-10'>Recipe App</h2>
+            <p className='py-6 text-lg text-gray-500'>Choose your favorite Recipe!!</p>
+        </div> 
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 p-6'>
+    {filteredRecipes.map((recipe) => (
    <RecipeCard 
    key={recipe.id}
    title={recipe.title}
@@ -13,6 +20,7 @@ const Home = () => {
    description = {recipe.description}
    />
     ))}  
+   </div>
    </div>
 )
 };

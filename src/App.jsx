@@ -1,5 +1,7 @@
 import Navbar from './Component/Navbar';
 import Home from './Pages/Home'
+import RecipeDetails from './Pages/RecipeDetails';
+import { Routes, Route} from 'react-router-dom'
 import { useState } from 'react'
 import './App.css'
 
@@ -9,7 +11,10 @@ const [searchItem, setSearchItem ] = useState("");
   return (
  <>
   <Navbar searchItem={searchItem} setSearchItem = {setSearchItem}/>
-  <Home searchItem= {searchItem}/>
+  <Routes>
+    <Route path='/' element={<Home searchItem= {searchItem}/>}/>
+    <Route path='/recipe/:id' element={<RecipeDetails/>}/>
+  </Routes>
  </>
   )
 }

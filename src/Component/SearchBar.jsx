@@ -9,7 +9,7 @@ const SearchBar = ({ searchItem, setSearchItem }) => {
     return(
         <div className='flex items-center focus-within:ring-2 focus-within:ring-red-400 bg-white px-3 py-2 rounded-full'>
             <input type='text' placeholder='Enter recipe name...'
-            value={searchItem} onChange={(e) => setSearchItem(e.target.value)} className={`transition-all ease-in-out duration-500 ${isOpen ? 'w-60 px-3 focus:outline-none border-none text-lg' : 'w-0 px-0 overflow-hidden'}`} />
+            value={searchItem} onChange={(e) => setSearchItem(e.target.value)} className={`transition-all ease-in-out duration-500 ${isOpen ? 'sm:w-60 w-35 px-3 focus:outline-none border-none sm:text-lg text-sm' : 'w-0 px-0 overflow-hidden'}`} />
             <button onClick={handleToggle} className='cursor-pointer'><FiSearch /></button>
         </div>
     )

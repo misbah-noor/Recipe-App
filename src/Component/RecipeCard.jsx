@@ -35,7 +35,7 @@ return(
       <div className='p-6 flex flex-col justify-center items-center'>
         <h2 className='text-2xl font-bold mb-2'>{recipes.title}</h2>
         <p className='text-gray-700'>{recipes.description}</p>
-        <button onClick={toggleFavorite} className='absolute top-4 right-4 text-2xl text-red-600 hover:scale-110 transition-all'>{isFavorite ? '❤' : '🤍'}</button>
+        <button onClick={toggleFavorite} className='absolute top-4 right-4 text-2xl text-red-600 hover:scale-110 transition-all'>{isFavorite ? '❤️' : '🤍'}</button>
         <button className='px-4 py-3 bg-gradient-to-r from-amber-500 to-red-500 rounded-lg w-full text-white my-5 hover:bg-gradient-to-r hover:from-red-500 hover:to-amber-500 cursor-pointer font-semibold text-lg transition-all ease-in-out duration-300'><Link to={`/recipe/${recipes.id}`}>View Details</Link></button>   
        </div>   
     </div>

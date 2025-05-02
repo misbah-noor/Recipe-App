@@ -1,7 +1,8 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import recipes from "../data/recipe";
 import { PiCookingPotDuotone } from "react-icons/pi";
 import { FaClipboardList } from "react-icons/fa";
+import { TiArrowBack } from "react-icons/ti";
 
 const RecipeDetails =() => {
    const {id} = useParams();
@@ -20,7 +21,12 @@ const RecipeDetails =() => {
         <h1 className="mt-9 text-center text-5xl font-bold mb-8 text-[#f15368] text-shadow-sm text-shadow-amber-300">{recipe.title}</h1> 
       <img src={recipe.image} className="h-85 object-cover rounded-lg shadow-lg hover:scale-95 transition-all ease-in-out duration-300" alt={recipe.title} />
       <p className="text-lg my-7 text-neutral-900">{recipe.description}</p>
-        </div>
+      <Link to="/">
+      <button className="flex gap-1 items-center mt-4 cursor-pointer px-4 py-3 bg-gradient-to-r from-red-500 to-amber-500 font-semibold text-white rounded hover:bg-gradient-to-r hover:from-amber-400 hover:to-red-400">
+      <TiArrowBack size={27} /> Back to Home
+      </button>
+      </Link>
+      </div>
       <div className="mb-10 sm:mb-0 sm:-mt-10 lg:mt-20 text-lg">
       <h3 className="flex gap-2 items-center text-2xl font-semibold mb-2 text-[#f97509]"><FaClipboardList />Ingredients:</h3>
       <ul className="text-neutral-900 list-disc pl-5 mb-4">

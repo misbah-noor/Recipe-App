@@ -262,7 +262,7 @@ const recipes = [
     {
       id: 11,
       title: "Chocolate Brownie",
-      image: "/images/brownie.png",
+      image: "/images/brownie (1).png",
       description: "Fudgy chocolate brownie with a rich, gooey center.",
       ingredients: [
         "1/2 cup butter",

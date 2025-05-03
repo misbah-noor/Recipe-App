@@ -1,12 +1,27 @@
-# React + Vite
+# Recipe App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive Recipe App built with **React + Vite** and **Tailwind CSS v4**.
 
-Currently, two official plugins are available:
+## Features
+- Search recipes by title
+- View detailed ingredients and instructions
+- Favorite recipes (stored in localStorage)
+- Smooth page transitions (Framer Motion)
+- Responsive design & animations
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- React
+- Vite
+- Tailwind CSS
+- React Router DOM
+- Framer Motion
 
-## Expanding the ESLint configuration
+## Live Demo
+[View the App](https://recipe-app-green-chi.vercel.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Run Locally
+```bash
+git clone https://github.com/misbah-noor/recipe-app.git
+cd tailwindcss4
+npm install
+npm run dev
